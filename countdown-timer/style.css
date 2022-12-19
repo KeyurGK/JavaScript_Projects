@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Jacques+Francois+Shadow&family=Londrina+Sketch&family=Nunito:wght@300;400;500;600;700&family=Orbitron:wght@400;500&family=Poppins:wght@400;500&family=Rubik+80s+Fade&family=Rubik+Distressed&family=Teko:wght@400;500;600;700&family=Zen+Dots&display=swap'); 
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background-image:url(image1.jpg);
+    min-height:100vh;
+    background-size:cover;
+    background-position:center center;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+h1{
+    font-size:3rem;
+}
+.countdown-container{
+    display:flex;
+
+}
+.big-text{
+    font-size:4rem;
+    line-height:1;
+    margin:0 2rem;
+}
+.countdown-el{
+    text-align:center;
+}
+.countdown-el span{
+    font-size:1.5rem;
+}
