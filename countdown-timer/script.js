@@ -2,7 +2,7 @@ const daysEl=document.getElementById('days');
 const hoursEl=document.getElementById('hours');
 const minsEl=document.getElementById('mins');
 const secsEl=document.getElementById('seconds');
-const newYears='20 Dec 2022';
+const newYears='1 Jan 2023';
 function countDown(){
     const currentDate=new Date();
     const newYearsDate=new Date(newYears);
@@ -13,10 +13,10 @@ function countDown(){
     const secs=Math.floor(seconds)%60;
 
     console.log(days,hours,minutes,secs);
-    daysEl.innerHTML=days;
+    daysEl.innerText=days;
     hoursEl.innerHTML=hours;
     minsEl.innerHTML=minutes;
-    secsEl.innerHTML=secs;
+    secsEl.innerText=secs;
 }
 countDown();
 setInterval(countDown,1000);
