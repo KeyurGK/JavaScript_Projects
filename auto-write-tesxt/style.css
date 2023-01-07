@@ -8,18 +8,5 @@ body{
     justify-content:center;
     margin:0;
     font-family:'Poppins', sans-serif;
-    min-height:100vh;
-}
-#container{
-    position:fixed;
-    bottom:10px;
-    right:10px;
-}
-.toast{
-    padding:2rem;
-    background-color: red;
-    color:white;
-    border-radius:5px;
-    margin:2px;
-
+    min-height:100vh;color: #111199;
 }

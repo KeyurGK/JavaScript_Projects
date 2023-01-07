@@ -3,7 +3,7 @@ const nav=document.getElementById('nav');
 
 
 btn.addEventListener('click', ()=>{
-    nav.classList.add('active');
+    nav.classList.toggle('active');
     btn.classList.toggle('active');
    
     
