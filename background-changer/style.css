@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Jacques+Francois+Shadow&family=Londrina+Sketch&family=Nunito:wght@300;400;500;600;700&family=Orbitron:wght@400;500&family=Poppins:wght@400;500&family=Rubik+80s+Fade&family=Rubik+Distressed&family=Teko:wght@400;500;600;700&family=Zen+Dots&display=swap'); 
+*{
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    min-height:100vh;
+}
+button{
+    background-color:rebeccapurple;
+    color:white;
+    padding:1rem;
+    box-shadow:2px 2px 4px rgba(0,0,0,0.2);
+    border:none;
+    border-radius:5px;
+}
