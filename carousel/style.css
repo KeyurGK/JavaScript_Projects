@@ -10,14 +10,20 @@ body{
     font-family:'Poppins', sans-serif;
     min-height:100vh;
 }
-.heart{
-    position:fixed;
-    top:-5vh;
-    transform:translateY(0);
-    animation:fall 5s linear;
+.carousel{
+    border:2px solid;
+    overflow:hidden;
+    height:500px;
+    width:500px;
+    
 }
-@keyframes fall{
-    to{
-        transform:translateY(100vh);
-    }
+.image-container{
+    display:flex;
+    transition:transform 0.3s linear;
+    transform:translateX(0);
+}
+img{
+    height:100px;
+    width:100px;
+    object-fit:cover;
 }
