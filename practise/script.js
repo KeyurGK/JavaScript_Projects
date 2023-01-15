@@ -1,18 +1,9 @@
-const test=document.getElementById('test');
-const color=document.getElementById('color');
-const size=document.getElementById('size');
-const upper=document.getElementById('upper');
+function rain(){
+    const content=document.createElement('div');
+    content.classList.add('raining');
+    content.innerHTML = '💧';
+    
+    document.body.appendChild(content);
+}
 
-color.addEventListener('click',() =>
-{
-    test.classList.toggle('change1');
-});
-
-size.addEventListener('click',()=>
-{
-    test.classList.toggle('change2');
-});
-upper.addEventListener('click',()=>
-{
-    test.classList.toggle('change3');
-})
+setInterval(rain,5);

@@ -6,21 +6,23 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    background-color:#000;
     margin:0;
     font-family:'Poppins', sans-serif;
     min-height:100vh;
     
 }
-.buttons button{
-    display:flex;
+.raining{
+    position:fixed;
+    margin-top:-35rem;
+    transform:translateY(-10px);
+    animation: fall 3s linear;
     
 }
-#test.change1{
-    color:red;
-}
-#test.change2{
-    font-size:20px;
-}
-#test.change3{
-    text-transform:uppercase;
+
+@keyframes fall{
+
+    to{
+        transform:translateY(100vh);
+    }
 }
