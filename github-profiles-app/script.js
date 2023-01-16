@@ -2,8 +2,11 @@ const APIURL = 'https://api.github.com/users/';
 const form = document.getElementById('form');
 const main = document.getElementById('main');
 const search = document.getElementById('search');
+const searchBtn = document.getElementById('searchBtn');
 
-form.addEventListener('submit', (e) =>
+
+
+searchBtn.addEventListener('click', (e) =>
 {
     e.preventDefault();
     const user = search.value;
@@ -13,19 +16,27 @@ form.addEventListener('submit', (e) =>
         getRepo(user);
         search.value='';
     }
+    else{
+        alert('Please enter the username! ')
+    }
 });
 
-getUser('KeyurGK');
-getRepo('KeyurGK')
+
 
 async function getUser(user){
     const resp = await fetch(APIURL + user);
     const respData = await resp.json();
-    createUserCard(respData);
+     if(respData.name === null){
+        alert('Sorry, User does not exist!');
+    }
+    else{
+        createUserCard(respData);
+    }
+    
 }
 
 async function getRepo(user){
-    const resp=await fetch(APIURL + user + '\repos');
+    const resp=await fetch(APIURL + user + '/repos');
     const respData = await resp.json();
 
     addReposCard(respData);
@@ -46,8 +57,7 @@ function addReposCard(repos){
 
 function createUserCard(user){
     
-
-    cardHTML = `
+ cardHTML = `
     <div class='card'>
     <div>
         <img class='avatar' src='${user.avatar_url}'
@@ -62,7 +72,8 @@ function createUserCard(user){
             <li>Following : ${user.following}</li>
             <li>Repos : ${user.public_repos}</li>
         </ul>
-        <div id = 'repoRow'></div>
+        <div id = 'repoRow'>
+        <h1>Repositories</h1></div>
     </div>
     
     </div>`;

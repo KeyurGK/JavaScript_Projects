@@ -12,6 +12,10 @@ body{
     font-family:'Poppins', sans-serif;
     min-height:100vh;
 }
+#title{
+    
+    margin-left:35%;
+}
 .card{
     display:flex;
     flex-direction:column;
@@ -31,6 +35,12 @@ body{
     margin-top:5%;
 
 }
+#searchBtn{
+    width:75px;
+    border-color:#07248d;
+    margin-top:-2%;
+    margin-left:250px;
+}
 .avatar{
     margin-top:5%;   
     margin-left:70px;
@@ -45,4 +55,28 @@ body{
 .user-info ul{
     list-style:none;
     margin-left:-40px;
+}
+#repoRow{
+    border-radius:20px;
+    box-shadow:0 5px 10px;
+    background-image:linear-gradient(315deg,#067b679e 0%,    
+    #07248d 75%);
+    width:250px;
+    position:absolute;
+    margin-left:250px;
+    margin-top:-320px;
+    padding:10px;
+}
+#repoRow h1{
+    color:white;
+    margin-left:8%;
+}
+#repoRow a{
+    margin-top:5px;
+    display:flex;
+    text-decoration: none;
+    color:white;
+    font-size:10px;
+    justify-content: center;
+    border:2px solid white;
 }
