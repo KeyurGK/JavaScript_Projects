@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Jacques+Francois+Shadow&family=Londrina+Sketch&family=Nunito:wght@300;400;500;600;700&family=Orbitron:wght@400;500&family=Poppins:wght@400;500&family=Rubik+80s+Fade&family=Rubik+Distressed&family=Teko:wght@400;500;600;700&family=Zen+Dots&display=swap'); 
+*{
+    box-sizing:border-box;
+}
+body{    
+    background-color:#beef00;
+    font-family:'Poppins', sans-serif;
+    background-repeat:no-repeat;
+    margin:0;
+    min-height:100vh;
+   
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.pw-container{
+    width:400px;
+    background-color:#5a6d0fba;
+    border:1px solid;
+    box-shadow: 10px 10px 1px 1px rgba(0,0,0,1);
+}
+
+.pw-header{
+    padding:1rem;
+}
+.pw{
+    background-color:#beef00;
+    border:1px solid;
+    height:70px;
+    color: #000;
+    display: flex;
+    width:100%;
+    font-size:18px;
+    position:relative;
+    width:100%;
+}
+.pw button{
+    position:absolute;
+    background-color: #4c5b11;
+    border-color: #fff;
+    color: #fff;
+    left:30%;
+    bottom:-10px;
+}
+.pw-body{
+    padding:1rem;
+}
+.form-control{
+    display:flex;
+    justify-content: space-between;
+    padding:0.5rem;
+}
+#generate button{
+    margin-left:100px;
+    background: rgba(90,44,55,1);
+    padding:5px;
+    width:50%;
+    box-shadow: 5px 5px 1px rgba(0,0,0,1);
+    border:1px solid #FFF;
+    color:white;
+    cursor:pointer;
+}
