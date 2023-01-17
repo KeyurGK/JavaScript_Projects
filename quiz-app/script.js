@@ -21,7 +21,7 @@ const quizData = [
         b : 'Hampi',
         c : 'Agra',
         d : 'Hyderabad',
-        correct : 'a'
+        correct : 'b'
     },
     {
         question : 'Which is the financial capital of India?',
@@ -47,10 +47,14 @@ const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const questionEl = document.getElementById('question');
 const submitBtn = document.getElementById('submitBtn');
+const answerEls = document.querySelectorAll('.answers');
 
 let initialQuestion = 0;
+let score = 0;
 loadQuiz();
+
 function loadQuiz(){
+    deSelectAnswers();
     let currentQuestion = quizData[initialQuestion];
     questionEl.innerHTML = currentQuestion.question;
     a_text.innerText = currentQuestion.a; 
@@ -60,15 +64,44 @@ function loadQuiz(){
     
 }
 
+function getSelected(){
+    
+    let answer = undefined;
+    answerEls.forEach(answerEl=>{
+        if(answerEl.checked){
+            answer =  answerEl.id;
+            
+        }
+    });
+    return answer;
+}
+
+function deSelectAnswers(){
+    answerEls.forEach(answerEl=>{
+        answerEl.checked = false;
+    });
+}
 submitBtn.addEventListener('click',()=>
 {
+    
+    
+    const answer = getSelected();
+    if(answer)
+{
+    if(answer === quizData[initialQuestion].correct)
+    {
+        score++;
+    }
     initialQuestion++;
-    if(initialQuestion < quizData.length){
+    if(initialQuestion < quizData.length)
+    {
         loadQuiz();
     }
     else{
-        alert('Quiz Finished ! Get yourself an Orange Lemonade 🥤');
+        alert(`Quiz Finished ! You answered ${score} out of ${quizData.length} correctly`);
         initialQuestion = 0;
         loadQuiz();
     }
+}
+    
 });
