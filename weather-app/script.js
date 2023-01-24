@@ -2,6 +2,7 @@ const contentEl=document.getElementById('content');
 const searchEl=document.getElementById('search');
 const searchBtn=document.getElementById('search-button');
 const locationEl=document.getElementById('location');
+
 const APIURL = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=';
 const options = {
 	method: 'GET',
@@ -52,7 +53,7 @@ function addLocation(locationData,location){
         </div>
         <div class="max-temp">
             <p>
-            Maximum Temperatue<br><br>
+             Maximum Temperatue<br><br>
                 ${locationData.max_temp} °c
             </p>
         </div>
@@ -72,6 +73,20 @@ function addLocation(locationData,location){
 }
 
 
+searchBtn.style.padding = '5px 20px';
+searchBtn.style.fontFamily = 'poppins';
+searchBtn.style.textTransform = 'uppercase';
+searchBtn.style.fontSize = '1.2rem';
+
+function entry(){
+const shower = document.createElement('div');
+shower.innerHTML='☁️<br>🌤️<br>🌩️<br>🌦️<br>🌧️<br>🌨️<br>❄️<br>☀️';
+shower.classList.add('shower');
+shower.style.left=Math.floor(Math.random()*360)+'vw';
+document.body.appendChild(shower);
+}
+
+setInterval(entry,300);
 // fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Delhi', options)
 // 	.then(response => response.json())
 // 	.catch(err => console.error(err));

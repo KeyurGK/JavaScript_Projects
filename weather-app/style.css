@@ -7,19 +7,52 @@ body{
     
     font-family:'Poppins', sans-serif;
     min-height:100vh;
+    background-image: url(/weather-app/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.shower{
+    position:fixed;
+    margin-top:-160vh;
+    animation: fall 3s ease-in;
+}
+@keyframes fall{
+    to{
+        margin-top:-120vh;
+    }
 }
 .title{
     margin-left:40%;
     margin-top:2%;
+    color:white;
+    letter-spacing:1px;
 }
 .search-bar{
    margin-left:40%;
    margin-top:2%;
 
 }
+#search{
+    border:2px solid white;
+    padding:5px;
+    height:40px;
+    width:120px;
+}
+.search-button{
+    box-shadow:3px 3px 1px rgb(232, 150, 19);
+    color:black;
+    border: none;
+    transition: all .3s;
+}
+.search-button:hover{
+    background-color:rgb(232, 150, 19);
+    
+    box-shadow:3px 3px 1px rgb(255, 255, 255);
+}
 .content{
     display:flex;
     flex-direction:column;
+    height:500px;
     margin-top:3%;
     margin-left:2%;
     margin-right:2%;
