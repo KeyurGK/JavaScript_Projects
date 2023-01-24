@@ -1,9 +1,10 @@
-function rain(){
-    const content=document.createElement('div');
-    content.classList.add('raining');
-    content.innerHTML = '💧';
-    
-    document.body.appendChild(content);
+const cover = document.querySelector('.cover');
+function snowing(){
+    const data = document.createElement('div');
+    data.classList.add('data');
+    data.innerHTML = '❄️';
+    data.style.left=(Math.random()*100)+'vw';
+    cover.appendChild(data);
 }
 
-setInterval(rain,5);
+setInterval(snowing,500);
