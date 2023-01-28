@@ -1,5 +1,6 @@
 const imgs=document.getElementById('imgs');
 const img=document.querySelectorAll('#imgs img');
+
 let idx=0;
 function run(){
     idx++;
@@ -8,7 +9,8 @@ function run(){
         idx=0;
     }
 
-    imgs.style.transform= `translateX(${-idx*5}px)`;
+    imgs.style.transform= `translateX(${-idx*400}px)`;
 
 }
+
 setInterval(run, 2000);
