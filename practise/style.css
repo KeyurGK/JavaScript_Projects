@@ -6,41 +6,10 @@ body{
 
     
    
-    background-color:#000;
+  
     
     font-family:'Poppins', sans-serif;
     
     
 }
 
-.cover{
-    width:50vw;
-    height:50vh;
-    border:2px solid white;
-}
-.squares{
-    display: flex;
-    justify-content:space-around;
-    margin-top:40px;
-}
-.squares *{
- width:5vw;
- height:5vh;
- border:1px solid rgb(235, 222, 222);
- transition:border 1s;
- 
-}
-.squares *:hover{
-    border:1px solid gray;
-}
-.data{
- margin-top:-100px;
- position:fixed;
- animation:fall 3s ease-in;
-}
-
-@keyframes fall{
-    to{
-        margin-top:450px;
-    }
-}
