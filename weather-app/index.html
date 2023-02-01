@@ -10,22 +10,43 @@
   </head>
   <body>
     <section id="header" class="header">
-
+      <h1 class='title'>Forecast</h1>
+      <div class="search-bar">
+           <input type="text" id="search" placeholder="Enter the location" autocomplete="off"/>
+           <button id="search-button" class="search-button">Search</button>
+      </div>
     </section>
 
     
 
     <div class="content" id="content">
-      <div class="row-1">
-        <div id="card-1" class="card-1"></div>
-      </div>
-      <div class="row-2">
-        <div id="card-2" class="card-2"></div>
-        <div id="card-3" class="card-3"></div>
-        <div id="card-4" class="card-4"></div>
-        <div id="card-5" class="card-5"></div>
-        <div id="card-6" class="card-6"></div>
-    </div>
+     
+       <div id="col-1" class="col-1">
+        <div class="emoji"></div>
+        <div class="temperature">
+          <p>Temperature</p>
+        </div>
+        <div class="celsius">
+          <p>°C</p>
+        </div>
+        <div class="farenheit">
+          <p>°F</p>
+        </div>
+        <div class="location">
+          <p>Location</p>
+        </div>
+        
+       </div>
+       <div class="col-2">
+        <div class="min-temp"></div>
+        <div class="max-temp"></div>
+        <div class="humidity"></div>
+        <div class="wind-speed"></div>
+        <div class="sunrise"></div>
+        <div class="sunset"></div>
+       </div>
+      
+      
   </div>
 
 </body>

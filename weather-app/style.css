@@ -6,21 +6,14 @@
 body{
     
     font-family:'Poppins', sans-serif;
-    min-height:100vh;
-    background-image: url(/weather-app/background.jpg);
-    background-size: cover;
+    background-image: url(/weather-app/bg.png);
     background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    background-attachment: fixed;
+color:white;
 }
-.shower{
-    position:fixed;
-    margin-top:-160vh;
-    animation: fall 3s ease-in;
-}
-@keyframes fall{
-    to{
-        margin-top:-120vh;
-    }
-}
+
 .header{
     display:flex;
     color:#fff;
@@ -30,7 +23,7 @@ body{
 .title{
     
     font-size:32px;
-    
+    text-transform:uppercase ;
     letter-spacing:1px;
 }
 
@@ -53,54 +46,53 @@ body{
     box-shadow:3px 3px 1px rgb(255, 255, 255);
 }
 .content{
-    margin-top:5%;
-}
-.content .row-1{
-    display: flex;
-    justify-content: center;
-}
-.content .row-1 .card-1{
-   height:35vh;
-   width:15vw;
-   justify-self: center;
-   background-image: linear-gradient(to bottom right,rgba(215, 180, 180,0.5), rgba(138, 138, 212,0.5));
-   border:2px solid rgb(132, 121, 121);
-   border-radius:5px;
-}
-
-.content .row-2{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top:2%;
-}
-.content .row-2 > *{
-    height:35vh;
-    width:15vw;
-   border:2px solid rgb(132, 121, 121);
-   border-radius:5px;
-   background-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0));
-}
-.content .box-1{
+    margin:3%;
+    min-height:50vh;
+    border:2px solid white;
     display:flex;
-    height:300px;
-    justify-content:space-evenly;
-   background-color: rgb(0, 0, 0);
-    
+    justify-content: space-around;
 }
-.content .box-1 *{
-    width:150px;
-    padding:30px 10px;
-    font-size: 1.2rem;
-    
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.col-1{
+    display:grid;
+    gap:3% 5%;
+    min-width:30vw;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows:repeat(4,1fr);
 }
-
-.content .box-2 .location p{
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-text-transform: capitalize;
-font-size: 1.5rem;
-margin-left: 50%;
-margin-top:1%;
-margin-bottom:1%;
-color:antiquewhite;
+.col-1 .emoji{
+    grid-area:2/1/4/3;
+    background-color: blueviolet;
+}
+.col-1 .temperature{
+    background-color: yellow;
+    grid-area:2/3/4/5;
+}
+.col-1 .celsius{
+    grid-area:2/5/3/6;
+}
+.col-1 .farenheit{
+    grid-area:3/5/4/6;
+}
+.col-1 .location{
+    grid-area:4/2/5/5;
+}
+.col-1>*{
+    
+    border:2px solid white;
+}
+.col-2{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+gap:10px;
+}
+.col-2 > *{
+   
+    width:12vw;
+    border-radius:5px;
+    background-image:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.8));
+    color:#fff;
+    transition:all .1s;
+}
+.col-2 > *:hover{
+    transform:translate(1%,2%);
 }
