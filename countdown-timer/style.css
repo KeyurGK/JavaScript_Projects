@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Jacques+Francois+Shadow&family=Londrina+Sketch&family=Nunito:wght@300;400;500;600;700&family=Orbitron:wght@400;500&family=Poppins:wght@400;500&family=Rubik+80s+Fade&family=Rubik+Distressed&family=Teko:wght@400;500;600;700&family=Zen+Dots&display=swap'); 
-*{
-    box-sizing:border-box;
-}
+
 .container{
     display:grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(8,50px);
+    row-gap:1%;
+    
 }
 @font-face{
     font-family:'sanskrit';
@@ -13,26 +13,41 @@
 }
 .header{
     grid-area:1/3/2/11;
-    font-size:32px;
+    font-size:22px;
     letter-spacing: 1.5px;
     align-self: center;
     justify-self: center;
     font-family: 'sanskrit';
 }
-.input-container{
-    grid-area:2/1/4/11;
+.start-date{
+    grid-area:2/1/3/13;
+    display: flex;
+    align-items: center;
+    max-height:50%;
+    margin:10%;
 }
 
+.target-date{
+    display: flex;
+    align-items: center;
+    margin:10%;
+   grid-area:3/1/4/13;
+   max-height:50%;
+}
+#submit{
+    margin:10%;
+  grid-area:4/5/5/9;
+  max-height:50%;
+}
 .countdown-container{
     border:1px solid;
-    grid-row: 6/ span 3;
-    grid-column: 1/13;
-    max-width: 100%;
+    grid-area:5/1/8/13;
+   
     display:flex;
 
 }
 .big-text{
-    font-size:50px;
+    font-size:5px;
     line-height:1;
     margin:10px;
 }
@@ -40,5 +55,5 @@
     text-align:center;
 }
 .countdown-el span{
-    font-size:14px;
+    font-size:4px;
 }
